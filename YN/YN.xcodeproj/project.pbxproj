@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7E3FFCF43758C4C85652E903 /* Pods_YN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D6A51296EDD0894E8C6001 /* Pods_YN.framework */; };
+		DDC474E8213D5ED00014711D /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474E7213D5ED00014711D /* ApiResult.swift */; };
+		DDC474EA213D5F200014711D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474E9213D5F200014711D /* APIService.swift */; };
+		DDC474EC213D6C210014711D /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474EB213D6C210014711D /* DataRequest.swift */; };
+		DDC474EE213D6C510014711D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474ED213D6C510014711D /* Endpoint.swift */; };
+		DDC474F0213D6CA50014711D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474EF213D6CA50014711D /* Manager.swift */; };
+		DDC474F2213D6CCA0014711D /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474F1213D6CCA0014711D /* NSError.swift */; };
+		DDC474F4213D6CF00014711D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC474F3213D6CF00014711D /* Utils.swift */; };
 		DDF3268E2136DC0D0014D3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF3268D2136DC0D0014D3DB /* AppDelegate.swift */; };
 		DDF326902136DC0D0014D3DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF3268F2136DC0D0014D3DB /* ViewController.swift */; };
 		DDF326932136DC0D0014D3DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF326912136DC0D0014D3DB /* Main.storyboard */; };
@@ -18,6 +25,13 @@
 /* Begin PBXFileReference section */
 		2934D608B95075276E7FA4DA /* Pods-YN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YN/Pods-YN.debug.xcconfig"; sourceTree = "<group>"; };
 		35D6A51296EDD0894E8C6001 /* Pods_YN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC474E7213D5ED00014711D /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		DDC474E9213D5F200014711D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DDC474EB213D6C210014711D /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		DDC474ED213D6C510014711D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DDC474EF213D6CA50014711D /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		DDC474F1213D6CCA0014711D /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		DDC474F3213D6CF00014711D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DDF3268A2136DC0D0014D3DB /* YN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF3268D2136DC0D0014D3DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF3268F2136DC0D0014D3DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +71,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DDC474E6213D5E9E0014711D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DDC474E7213D5ED00014711D /* ApiResult.swift */,
+				DDC474E9213D5F200014711D /* APIService.swift */,
+				DDC474EB213D6C210014711D /* DataRequest.swift */,
+				DDC474ED213D6C510014711D /* Endpoint.swift */,
+				DDC474EF213D6CA50014711D /* Manager.swift */,
+				DDC474F1213D6CCA0014711D /* NSError.swift */,
+				DDC474F3213D6CF00014711D /* Utils.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DDC474F5213D7D990014711D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DDF326912136DC0D0014D3DB /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DDC474F6213D7DC50014711D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDF3268D2136DC0D0014D3DB /* AppDelegate.swift */,
+				DDF3268F2136DC0D0014D3DB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		DDF326812136DC0D0014D3DB = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +123,9 @@
 		DDF3268C2136DC0D0014D3DB /* YN */ = {
 			isa = PBXGroup;
 			children = (
-				DDF3268D2136DC0D0014D3DB /* AppDelegate.swift */,
-				DDF3268F2136DC0D0014D3DB /* ViewController.swift */,
-				DDF326912136DC0D0014D3DB /* Main.storyboard */,
+				DDC474E6213D5E9E0014711D /* API */,
+				DDC474F6213D7DC50014711D /* Controllers */,
+				DDC474F5213D7D990014711D /* Storyboard */,
 				DDF326942136DC0E0014D3DB /* Assets.xcassets */,
 				DDF326962136DC0E0014D3DB /* LaunchScreen.storyboard */,
 				DDF326992136DC0E0014D3DB /* Info.plist */,
@@ -181,7 +226,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC474E8213D5ED00014711D /* ApiResult.swift in Sources */,
+				DDC474EC213D6C210014711D /* DataRequest.swift in Sources */,
+				DDC474F4213D6CF00014711D /* Utils.swift in Sources */,
 				DDF326902136DC0D0014D3DB /* ViewController.swift in Sources */,
+				DDC474F2213D6CCA0014711D /* NSError.swift in Sources */,
+				DDC474EA213D5F200014711D /* APIService.swift in Sources */,
+				DDC474F0213D6CA50014711D /* Manager.swift in Sources */,
+				DDC474EE213D6C510014711D /* Endpoint.swift in Sources */,
 				DDF3268E2136DC0D0014D3DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
