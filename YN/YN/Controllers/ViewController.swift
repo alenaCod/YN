@@ -6,37 +6,34 @@
 //  Copyright © 2018 Viktor Pechersky. All rights reserved.
 //
 
-
-
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateData()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    fileprivate var abc: [JSONId] = []
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    fileprivate var items: [JSONItems] = [] {
+        didSet {
+            print("ITEMS: ", items)
+        }
     }
     
-    private func updateData (){
-        APIService.sharedInstance.getAPI (comletion: { [weak self] result in
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateData()
+    }
+
+    private func updateData() {
+        APIService.sharedInstance.getAPI(completion: { [weak self] result in
             
-            if let _result = result as? [JSONId] {
-                self?.abc = _result
-                print("   ***  abc  ***   ", self?.abc)
+            if let _result = result as? JSONResponse {
+                self?.items = _result.items
             } else {
-                self?.abc = []
+                self?.items = []
             }
         })
     }
-    
 
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
-

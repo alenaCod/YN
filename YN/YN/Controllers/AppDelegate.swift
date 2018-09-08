@@ -6,18 +6,12 @@
 //  Copyright © 2018 Viktor Pechersky. All rights reserved.
 //
 
-
-
-
-//https://developers.google.com/youtube/v3/quickstart/ios?ver=swift
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

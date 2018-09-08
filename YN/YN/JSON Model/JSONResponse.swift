@@ -15,7 +15,6 @@ struct JSONResponse: Codable {
     let regionCode: String
     let pageInfo: JSONPage
     let items: [JSONItems]
-    
 }
 
 struct JSONPage: Codable {
@@ -32,4 +31,8 @@ struct JSONItems: Codable {
 struct JSONId: Codable {
     let kind: String
     let videoId :String
+}
+
+struct JSONSnippet: Codable {
+    let channelId: String
 }

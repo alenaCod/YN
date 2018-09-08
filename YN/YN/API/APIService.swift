@@ -13,14 +13,13 @@ class APIService {
     
     static let sharedInstance = APIService()
     
-    //private let appID = "AIzaSyCbVfMWTxgGIJBa6uncFakrHpeKReNmksg"
-
+    private let appID = "AIzaSyCbVfMWTxgGIJBa6uncFakrHpeKReNmksg"
+    private let baseUrl = "https://www.googleapis.com/youtube"
 
     private init() {}
     
-    func getAPI( comletion: @escaping (_ result: JSONResponse?) -> Void) {
-        let url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&type=video&key=AIzaSyCbVfMWTxgGIJBa6uncFakrHpeKReNmksg"
-        //let url = "https://api.openweathermap.org/data/2.5/forecast?id=\(idCity.toString())&APPID=\(appID)"
+    func getAPI( completion: @escaping (_ result: JSONResponse?) -> Void) {
+        let url = baseUrl + "/v3/search?part=snippet&maxResults=25&q=surfing&type=video&key=\(appID)"
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default)
             .responseData { response in
@@ -28,15 +27,16 @@ class APIService {
                 let decoder = JSONDecoder()
                 do {
                     guard let data = response.data else {
-                        comletion(nil)
+                        completion(nil)
                         return
                     }
-                    //let weather: JSONResponse = try decoder.decode(JSONResponse.self, from: data)
+                    
                     let firsResponse: JSONResponse = try decoder.decode(JSONResponse.self, from: data)
-                    comletion(firsResponse)
-                    print("  ||  Start ->   "  , firsResponse)
+ 
+                    print("JSON Data: ", firsResponse)
+                    completion(firsResponse)
                 } catch {
-                    comletion(nil)
+                    completion(nil)
                 }
         }
     }
